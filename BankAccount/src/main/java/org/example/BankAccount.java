@@ -58,7 +58,7 @@ public class BankAccount {
     }
 
     public String withdraw(double amountToWithdraw){
-        if (amountToWithdraw > availableBalance){
+        if (amountToWithdraw > availableBalance || amountToWithdraw <= 0){
             return "Invalid withdraw amount.";
         }else{
             availableBalance -= amountToWithdraw;
