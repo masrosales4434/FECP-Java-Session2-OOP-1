@@ -8,5 +8,6 @@ public class Main {
         BankAccount bankAccount = new BankAccount(123, "Marvin", 1000);
 
         System.out.println(bankAccount.deposit(1000));
+        bankAccount.displayInformation();
     }
 }
