@@ -7,10 +7,15 @@ public class BankAccount {
     private double availableBalance;
 
 
-    public BankAccount(int accountNumber, String bankAccountHolderName, double availableBalance) {
+    public BankAccount(int accountNumber, String bankAccountHolderName, double initialDeposit) {
         this.accountNumber = accountNumber;
         this.bankAccountHolderName = bankAccountHolderName;
-        this.availableBalance = availableBalance;
+
+        if(initialDeposit >= 0){
+            this.availableBalance = initialDeposit;
+        }else{
+            throw new IllegalArgumentException("Invalid initial deposit.");
+        }
     }
 
     public BankAccount(int accountNumber, String bankAccountHolderName) {
